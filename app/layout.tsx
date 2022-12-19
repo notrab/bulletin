@@ -1,4 +1,10 @@
+import { Inter } from '@next/font/google';
+
 import './globals.css'
+
+const inter = Inter({
+  variable: '--font-inter',
+});
 
 export default function RootLayout({
   children,
@@ -6,11 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className={inter.variable}>
       <head />
       <body>{children}</body>
     </html>
